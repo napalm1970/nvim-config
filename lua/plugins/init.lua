@@ -1,17 +1,17 @@
 
 -- vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+return require('packer').startup(function(use)
+use 'wbthomason/packer.nvim'
   
-  use 'navarasu/onedark.nvim'
-  use {
+use 'navarasu/onedark.nvim'
+use {
     'hoob3rt/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     event = "BufWinEnter",
     config = "require('lualine-config')"
   }
-  use {
+use {
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
@@ -20,12 +20,12 @@ return require('packer').startup(function()
     config = "require('nvim-tree-config')"
   }
 
-  use {'akinsho/bufferline.nvim', 
+use {'akinsho/bufferline.nvim', 
           requires = {'kyazdani42/nvim-web-devicons'},
           config = "require('bufferline-config')"
         }
 
-  use {
+use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} },
   config = "require('telescope-config')"
@@ -49,12 +49,10 @@ use {'onsails/lspkind-nvim'}
 use {'williamboman/nvim-lsp-installer'}
 
 use {'norcalli/nvim-colorizer.lua', config = "require('colorizer-config')", event = "BufRead"}
-  use {
+use {
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'},
-    config = function()
-      require('gitsigns').setup {current_line_blame = true}
-    end
+    config = "require('gitsigns-config')"
   }
 use {'tami5/lspsaga.nvim', config = "require('lspsaga-config')"}
 use {"akinsho/toggleterm.nvim", config = "require('toggleterm-config')"}
@@ -66,9 +64,18 @@ use {
     event = "BufRead"
   }
 
-  use {'windwp/nvim-ts-autotag', event = "InsertEnter", after = "nvim-treesitter"}
-  use {'p00f/nvim-ts-rainbow', after = "nvim-treesitter"}
-  use {'windwp/nvim-autopairs', config = "require('autopairs-config')", after = "nvim-cmp"}
+use {'windwp/nvim-ts-autotag', event = "InsertEnter", after = "nvim-treesitter"}
+use {'p00f/nvim-ts-rainbow', after = "nvim-treesitter"}
+use {'windwp/nvim-autopairs', config = "require('autopairs-config')", after = "nvim-cmp"}
 
-  use {'folke/which-key.nvim', event = "BufWinEnter", config = "require('whichkey-config')"}
+use {'folke/which-key.nvim', event = "BufWinEnter", config = "require('whichkey-config')"}
+-- use {'glepnir/dashboard-nvim', event = "BufRead", config = "require('dashboard-config')"}
+
+use {
+    'goolord/alpha-nvim',
+    config = "require('alpha-config')"
+}
+
+
+
 end)

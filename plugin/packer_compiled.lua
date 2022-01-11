@@ -69,6 +69,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["alpha-nvim"] = {
+    config = { "require('alpha-config')" },
+    loaded = true,
+    path = "/home/napalm/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["bufferline.nvim"] = {
     config = { "require('bufferline-config')" },
     loaded = true,
@@ -246,10 +252,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require('lsp')
-time([[Config for nvim-lspconfig]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+require('comment-config')
+time([[Config for nvim-comment]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('telescope-config')
+time([[Config for telescope.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\1\2Q\0\0\2\0\4\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0>\0\2\1G\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
@@ -262,18 +272,18 @@ time([[Config for lspsaga.nvim]], false)
 time([[Config for bufferline.nvim]], true)
 require('bufferline-config')
 time([[Config for bufferline.nvim]], false)
--- Config for: nvim-comment
-time([[Config for nvim-comment]], true)
-require('comment-config')
-time([[Config for nvim-comment]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('telescope-config')
-time([[Config for telescope.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 require('toggleterm-config')
 time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require('lsp')
+time([[Config for nvim-lspconfig]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('alpha-config')
+time([[Config for alpha-nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]

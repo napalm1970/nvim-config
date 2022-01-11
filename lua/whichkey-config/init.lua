@@ -27,6 +27,7 @@ local toggle_lazygit = function()
 end
 
 local mappings = {
+  a = {":Alpha<cr>", "Alpha"},
   q = {":q<cr>", "Quit"},
   Q = {":wq<cr>", "Save & Quit"},
   w = {":w<cr>", "Save"},

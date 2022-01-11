@@ -35,5 +35,9 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 
+vim.g.autochdir = true
+
 vim.g.mapleader = " "
 vim.cmd('nnoremap <Leader>e :NvimTreeToggle<cr>')
+vim.cmd('nnoremap <Leader>cd :lcd %:h<cr>')
+vim.cmd('nnoremap <Leader>rf :Telescope oldfiles<cr>')
