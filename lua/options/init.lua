@@ -41,3 +41,5 @@ vim.g.mapleader = " "
 vim.cmd('nnoremap <Leader>e :NvimTreeToggle<cr>')
 vim.cmd('nnoremap <Leader>cd :lcd %:h<cr>')
 vim.cmd('nnoremap <Leader>rf :Telescope oldfiles<cr>')
+
+-- vim.cmd('autocmd BufEnter * silent! lcd %:p:h')

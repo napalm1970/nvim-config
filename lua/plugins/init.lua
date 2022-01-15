@@ -78,7 +78,7 @@ use {
 
 use {
   "ahmedkhalf/project.nvim",
-  -- config = "require('project-config')"
+  config = "require('project-config')"
 }
 
 
