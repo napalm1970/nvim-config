@@ -81,5 +81,9 @@ use {
   config = "require('project-config')"
 }
 
+use {'rcarriga/nvim-notify',
+    config = "require('notify-config')"
+  }
+
 
 end)
