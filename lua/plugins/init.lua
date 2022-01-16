@@ -85,5 +85,9 @@ use {'rcarriga/nvim-notify',
     config = "require('notify-config')"
   }
 
+  use{
+    'jose-elias-alvarez/null-ls.nvim',
+    config = "require('null-ls-config')"
+}
 
 end)
