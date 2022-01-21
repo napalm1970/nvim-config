@@ -129,6 +129,12 @@ _G.packer_plugins = {
     path = "/home/napalm/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
+  ["null-ls.nvim"] = {
+    config = { "require('null-ls-config')" },
+    loaded = true,
+    path = "/home/napalm/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     config = { "require('autopairs-config')" },
     load_after = {},
@@ -168,6 +174,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-notify"] = {
+    config = { "require('notify-config')" },
     loaded = true,
     path = "/home/napalm/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
@@ -267,10 +274,18 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-lspconfig]], true)
 require('lsp')
 time([[Config for nvim-lspconfig]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('alpha-config')
+time([[Config for alpha-nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 require('toggleterm-config')
 time([[Config for toggleterm.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('telescope-config')
+time([[Config for telescope.nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 require('comment-config')
@@ -287,14 +302,14 @@ time([[Config for lspsaga.nvim]], false)
 time([[Config for bufferline.nvim]], true)
 require('bufferline-config')
 time([[Config for bufferline.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('telescope-config')
-time([[Config for telescope.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require('alpha-config')
-time([[Config for alpha-nvim]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require('notify-config')
+time([[Config for nvim-notify]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require('null-ls-config')
+time([[Config for null-ls.nvim]], false)
 -- Config for: project.nvim
 time([[Config for project.nvim]], true)
 require('project-config')
